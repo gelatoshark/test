@@ -1,0 +1,89 @@
+{
+    "buildBehavior": {
+        "accumulativeConfig": null,
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": false,
+            "id": "createddate",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "createddate",
+            "oid": "62186c5a-ad9f-4050-80e7-7cc2854fd1b2",
+            "precision": 10,
+            "scale": 0,
+            "size": 50,
+            "type": 31
+        },
+        {
+            "hidden": false,
+            "id": "messagetype",
+            "indexed": false,
+            "isUpsertBy": false,
+            "name": "messagetype",
+            "oid": "379b1311-af87-471b-be6d-c33bf7101d6e",
+            "precision": 2000,
+            "scale": 0,
+            "size": 2000,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "processingmode",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "processingmode",
+            "oid": "73824d42-28ce-47a8-a8cc-901e0d60fd9a",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 8
+        },
+        {
+            "hidden": false,
+            "id": "recordcount",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "recordcount",
+            "oid": "bc98c145-212c-4608-aabc-39bf082a7820",
+            "precision": 10,
+            "scale": 0,
+            "size": 10,
+            "type": 8
+        }
+    ],
+    "configOptions": {
+    },
+    "dataset": "e892f6b3-0e23-4489-a554-a88b8ec210af",
+    "hidden": false,
+    "id": "SummaristCounts.csv",
+    "isMaterialized": false,
+    "name": "SummaristCounts.csv",
+    "oid": "a7ca2032-13a0-427e-ac45-348cc09da9c1",
+    "schemaName": "CSV",
+    "tupleTransformations": [
+        {
+            "arguments": {
+                "expression": {
+                    "expression": "10000000000 * getyear([createddate]) + 100000000 * getmonth([createddate]) + \ngetday([createddate]) * 1000000 + gethour([createddate]) * 10000 + \ngetminute([createddate]) * 100 + getsecond([createddate])",
+                    "isDatabaseDialect": false,
+                    "oid": "11d10880-7f5e-48b9-9e20-b13055432c31"
+                },
+                "hidden": false,
+                "id": "aux createddate",
+                "indexed": true,
+                "isUpsertBy": false,
+                "lastUpdated": "2023-02-21T13:23:14.852Z",
+                "name": "aux createddate",
+                "oid": "213ec4d8-e86f-4064-8101-45e480f6b147",
+                "precision": 0,
+                "scale": 0,
+                "size": 0,
+                "type": 0
+            },
+            "type": "add-column"
+        }
+    ],
+    "type": "base"
+}

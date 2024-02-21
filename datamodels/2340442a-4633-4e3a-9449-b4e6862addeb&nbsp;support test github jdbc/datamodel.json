@@ -1,0 +1,35 @@
+{
+    "buildDestination": {
+        "database": null,
+        "destination": "elasticube",
+        "schema": null
+    },
+    "datasets": [
+        "./e892f6b3-0e23-4489-a554-a88b8ec210af/dataset.json"
+    ],
+    "dependencies": {
+        "perspectives": [
+            "./2340442a-4633-4e3a-9449-b4e6862addeb/perspective.json"
+        ]
+    },
+    "experiments": {
+    },
+    "fiscal": "system",
+    "hierarchies": [
+    ],
+    "modelStatistics": {
+        "allTablesPerCollection": true,
+        "enableModelStatistics": true,
+        "maxTablesPerCollection": null,
+        "recollectStatsInterval": null
+    },
+    "oid": "2340442a-4633-4e3a-9449-b4e6862addeb",
+    "relationType": "regular",
+    "relations": "./relations.json",
+    "relationsTables": [
+    ],
+    "schemaId": null,
+    "shouldUpdateScheduleOnManualBuild": null,
+    "title": "support test github jdbc",
+    "type": "extract"
+}
